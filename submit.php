@@ -9,7 +9,7 @@
 				} 
 
 				$sql = "INSERT INTO ProjectNames VALUES ('".$_POST["name"]."');";
-				if (!mysqli_query($con,$sql){
+				if (!mysqli_query($con,$sql)){
   					echo("Error description: " . mysqli_error($con));
  				}
 				echo $sql;
