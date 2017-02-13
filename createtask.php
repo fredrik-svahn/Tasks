@@ -5,11 +5,12 @@
 	$username = "root";
 	$password = "root";
 	$conn = new mysqli($servername, $username, $password, $dbname);
-	$echo $_POST["projectname"];
-	$sql = 'INSERT INTO Tasks VALUES (`ProjectName`, `TaskName`, `Expire`) ('.$_POST["projectname"].','.$_POST["name"].','.$_POST["date"].' '.$_POST["time"].')'
-	mysqli_query($conn, $sql);
-	
+	$sql = 'INSERT INTO Tasks (`ProjectName`, `TaskName`, `Expire`) VALUES ('."'".$_POST["projectname"]."'".','."'".$_POST["name"]."'".','."'".$_POST["date"].' '.$_POST["time"].':00.000000'."'".')';
+	if(!mysqli_query($conn, $sql)) {
+		echo("Error description: " . mysqli_error($conn));
+	}
+	echo $sql;
 	mysqli_close($conn); 
-	header("Location: index.php");
+	header('Location: ' . $_SERVER['HTTP_REFERER']);
 
 ?>
