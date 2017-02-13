@@ -9,13 +9,13 @@
 				} 
 
 				$sql = "INSERT INTO ProjectNames VALUES ('".$_POST["name"]."');";
-				
+
 				if (!mysqli_query($conn,$sql)){
   					echo("Error description: " . mysqli_error($con));
  				}
 				mysqli_close($conn);
 
 
-				header("Location: http://localhost:8888/");
+				header("Location: http://localhost:8888");
 				exit();
 ?>
