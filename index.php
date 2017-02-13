@@ -26,7 +26,7 @@
 		}
 		mysqli_close($conn);
 		?>
-		<form method="post">
+		<form action="submit.php" method="post">
 			<input type="text" name="name" placeholder="Name your new project"></input>
 			<input type="submit" value="Submit">
 		</form>
