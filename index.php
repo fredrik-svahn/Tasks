@@ -23,7 +23,7 @@
 		$result = mysqli_query($conn, $sql);
 
 		foreach($result as $project) {
-			echo '<a href="#" onclick="viewTasks()">'.$project["ProjectName"].'</a>';
+			echo '<a href="#" id="'.$project["ProjectName"].'" onclick="viewTasks(this.id)">'.$project["ProjectName"].'</a><br>';
 		}
 
 		mysqli_close($conn);
