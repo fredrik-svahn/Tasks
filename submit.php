@@ -8,9 +8,10 @@
     				die("Connection failed: " . $conn->connect_error);
 				} 
 
-				$sql = "INSERT INTO ProjectNames VALUES " .$_POST["name"];
+				$sql = "INSERT INTO ProjectNames VALUES ('".$_POST["name"]."');";
+				$query = mysqli_query($conn, $sql);
 				echo $sql;
-				mysqli_query($conn, $sql);
+				echo $query;
 				mysqli_close($conn);
 
 
