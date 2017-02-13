@@ -22,7 +22,7 @@
 		$sql = "SELECT * FROM ProjectNames";
 		$result = mysqli_query($conn, $sql);
 		foreach($result as $project) {
-			echo $project["ProjectName"];
+			echo '<a href="">'.$project["ProjectName"]."<br>"."</a>";
 		}
 		mysqli_close($conn);
 		?>
