@@ -9,8 +9,10 @@
 
 	<body>
 		<h1>Projects</h1>
-		<a id="createNew" href="" onclick="createNew()">Create new project</a>
-		<input id="createNewField"></input>
+		<form method="post">
+			<input type="text" name="name"></input>
+			<input type="submit" value="Submit"></a>
+		</form>
 	</body>
 
 </html>
