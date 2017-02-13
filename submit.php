@@ -15,5 +15,6 @@
 				mysqli_close($conn);
 
 
-
+				header("Location: http://localhost:8888/");
+				exit();
 ?>
