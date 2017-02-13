@@ -2,7 +2,7 @@
 	<head>
 		<title>Tasks</title>
 		<meta charset="UTF-8">
-		<script src="js/script.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 		<link href="css/style.css" rel="stylesheet">
 
 	</head>
@@ -21,9 +21,11 @@
 		
 		$sql = "SELECT * FROM ProjectNames";
 		$result = mysqli_query($conn, $sql);
+
 		foreach($result as $project) {
-			echo '<a href="">'.$project["ProjectName"]."<br>"."</a>";
+			echo '<a href="#" onclick="viewTasks()">'.$project["ProjectName"].'</a>';
 		}
+
 		mysqli_close($conn);
 		?>
 		<form action="submit.php" method="post">
