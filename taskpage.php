@@ -14,9 +14,10 @@
 	}
 
 	mysqli_close($conn);
+	echo '<form action="createtask.php" method="post">';
+	echo '<input style="display:none" name="projectname" value="'.$_GET["name"].'"></input>'
 ?>
 
-<form action="createtask.php" method="post">
 <input type="text" name="name" placeholder="Name new task"></input>
 <input type="date" name="date"></input><input type="time" name="time"></input>
 <input type="submit" value="Submit">
