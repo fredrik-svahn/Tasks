@@ -9,9 +9,11 @@
 
 	<body>
 		<h1>Projects</h1>
-		<form method="post">
-			<input type="text" name="name"></input>
-			<input type="submit" value="Submit"></a>
+		<form action="submit.php" method="post">
+			<input type="text" name="name" placeholder="Name your new project"></input>
+			<input type="submit" value="Submit">
+			
+			
 		</form>
 	</body>
 
